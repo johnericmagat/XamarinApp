@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:customRenderer="clr-namespace:XamarinApp.CustomRenderer"
+                  xmlns:helper="clr-namespace:XamarinApp.Helper"
+                  x:Class="XamarinApp.View.SysMasterDetailPage"
+                  MasterBehavior="Popover">
+    
+    <MasterDetailPage.Master>
+        <ContentPage Title="Master">
+            <ContentPage.Content>
+                <ScrollView>
+                    <StackLayout Background="White">
+                        <StackLayout Orientation="Horizontal" HeightRequest="60" Background="#03A9F4">
+                            <Image x:Name="ImgHeader" Margin="5,0,0,0">
+                                <Image.Source>
+                                    <FontImageSource
+                                        FontFamily="{StaticResource MaterialFontFamily}"
+                                        Glyph="{Static helper:clsIconFontHelper.Home}"
+                                        Color="White"
+                                        Size="40" />
+                                </Image.Source>
+                            </Image>
+                            <Label x:Name="LblHeader" Text="Xamarin App" Style="{StaticResource MenuHeaderStyle}" />
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HeightRequest="32">
+                            <customRenderer:clsButtonTextAlignmentLeft x:Name="BtnMasterFile" Text="Master Files" Style="{StaticResource MenuItemStyle}" Clicked="BtnMasterFile_Clicked">
+                                <Button.ImageSource>
+                                    <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                     Glyph="{Static helper:clsIconFontHelper.FolderMultiple}"
+                                     Color="White"
+                                     Size="25" />
+                                </Button.ImageSource>
+                            </customRenderer:clsButtonTextAlignmentLeft>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HeightRequest="32">
+                            <customRenderer:clsButtonTextAlignmentLeft x:Name="BtnTransaction" Text="Transactions" Style="{StaticResource MenuItemStyle}" Clicked="BtnTransaction_Clicked">
+                                <Button.ImageSource>
+                                    <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                     Glyph="{Static helper:clsIconFontHelper.Briefcase}"
+                                     Color="White"
+                                     Size="25" />
+                                </Button.ImageSource>
+                            </customRenderer:clsButtonTextAlignmentLeft>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HeightRequest="32">
+                            <customRenderer:clsButtonTextAlignmentLeft x:Name="BtnReport" Text="Reports" Style="{StaticResource MenuItemStyle}" Clicked="BtnReport_Clicked">
+                                <Button.ImageSource>
+                                    <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                     Glyph="{Static helper:clsIconFontHelper.PaperRoll}"
+                                     Color="White"
+                                     Size="25" />
+                                </Button.ImageSource>
+                            </customRenderer:clsButtonTextAlignmentLeft>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HeightRequest="32">
+                            <customRenderer:clsButtonTextAlignmentLeft x:Name="BtnSetting" Text="Settings" Style="{StaticResource MenuItemStyle}" Clicked="BtnSetting_Clicked">
+                                <Button.ImageSource>
+                                    <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                     Glyph="{Static helper:clsIconFontHelper.Cog}"
+                                     Color="White"
+                                     Size="25" />
+                                </Button.ImageSource>
+                            </customRenderer:clsButtonTextAlignmentLeft>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HeightRequest="32">
+                            <customRenderer:clsButtonTextAlignmentLeft x:Name="BtnUtilities" Text="Utilities" Style="{StaticResource MenuItemStyle}" Clicked="BtnUtilities_Clicked">
+                                <Button.ImageSource>
+                                    <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                     Glyph="{Static helper:clsIconFontHelper.Toolbox}"
+                                     Color="White"
+                                     Size="25" />
+                                </Button.ImageSource>
+                            </customRenderer:clsButtonTextAlignmentLeft>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HeightRequest="32">
+                            <customRenderer:clsButtonTextAlignmentLeft x:Name="BtnAbout" Text="About" Style="{StaticResource MenuItemStyle}" Clicked="BtnAbout_Clicked">
+                                <Button.ImageSource>
+                                    <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                     Glyph="{Static helper:clsIconFontHelper.Information}"
+                                     Color="White"
+                                     Size="25" />
+                                </Button.ImageSource>
+                            </customRenderer:clsButtonTextAlignmentLeft>
+                        </StackLayout>
+                    </StackLayout>
+                </ScrollView>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <ContentPage>
+            <ContentPage.Content>
+                <StackLayout Margin="5,5,5,5">
+                    <Label x:Name="LblDetail" Text="Detail"/>
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

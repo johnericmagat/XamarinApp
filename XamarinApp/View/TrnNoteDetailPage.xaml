@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:helper="clr-namespace:XamarinApp.Helper"
+             x:Class="XamarinApp.View.TrnNoteDetailPage"
+             Title="Note Details">
+
+    <Grid x:Name="GrdMain">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <ScrollView>
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="LblId" Text="ID:" Style="{StaticResource LabelFieldStyle}" />
+                        <Entry x:Name="TxtId" Style="{StaticResource TextFieldStyle}" IsEnabled="False" Text="{Binding Id}" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="LblNote" Text="Note:" Style="{StaticResource LabelFieldStyle}" />
+                        <Entry x:Name="TxtNote" Style="{StaticResource TextFieldStyle}" Text="{Binding Note}" />
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+        <Frame Grid.Row="2" Grid.Column="0" x:Name="BtnSaveFrame" IsVisible="false" Style="{StaticResource FrameButtonStyle}" Margin="5,0,0,5">
+            <StackLayout Orientation="Horizontal" x:Name="BtnSave" Background="LightGreen">
+                <ContentView HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <StackLayout Orientation="Horizontal">
+                        <Image>
+                            <Image.Source>
+                                <FontImageSource
+                                        FontFamily="{StaticResource MaterialFontFamily}"
+                                        Glyph="{Static helper:clsIconFontHelper.ContentSave}"
+                                        Color="White"
+                                        Size="40" />
+                            </Image.Source>
+                        </Image>
+                        <Label Text="SAVE" FontAttributes="Bold" TextColor="White" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" />
+                    </StackLayout>
+                </ContentView>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="BtnSave_Tapped" Command="{Binding InsertNoteCommand}"/>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+        </Frame>
+        <Frame Grid.Row="2" Grid.Column="0" x:Name="BtnUpdateFrame" IsVisible="false" Style="{StaticResource FrameButtonStyle}" Margin="5,0,0,5">
+            <StackLayout Orientation="Horizontal" x:Name="BtnUpdate" Background="LightGreen">
+                <ContentView HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <StackLayout Orientation="Horizontal">
+                        <Image>
+                            <Image.Source>
+                                <FontImageSource
+                                        FontFamily="{StaticResource MaterialFontFamily}"
+                                        Glyph="{Static helper:clsIconFontHelper.ContentSaveEdit}"
+                                        Color="White"
+                                        Size="40" />
+                            </Image.Source>
+                        </Image>
+                        <Label Text="UPDATE" FontAttributes="Bold" TextColor="White" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" />
+                    </StackLayout>
+                </ContentView>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="BtnUpdate_Tapped" Command="{Binding UpdateNoteCommand}" />
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+        </Frame>
+        <Frame Grid.Row="2" Grid.Column="1" x:Name="BtnCloseFrame" Style="{StaticResource FrameButtonStyle}" Margin="0,0,5,5">
+            <StackLayout Orientation="Horizontal" x:Name="BtnClose" Background="LightCoral">
+                <ContentView HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <StackLayout Orientation="Horizontal">
+                        <Image>
+                            <Image.Source>
+                                <FontImageSource
+                                        FontFamily="{StaticResource MaterialFontFamily}"
+                                        Glyph="{Static helper:clsIconFontHelper.Close}"
+                                        Color="White"
+                                        Size="40" />
+                            </Image.Source>
+                        </Image>
+                        <Label Text="CLOSE" FontAttributes="Bold" TextColor="White" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" />
+                    </StackLayout>
+                </ContentView>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="BtnClose_Tapped"/>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+        </Frame>
+    </Grid>
+</ContentPage>

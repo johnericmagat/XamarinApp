@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:helper="clr-namespace:XamarinApp.Helper"
+             x:Class="XamarinApp.View.SysLoginPage">
+    
+    <ContentPage.Content>
+        <Grid x:Name="GrdMain">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#03A9F4">
+                <Image x:Name="ImgHeader" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand">
+                    <Image.Source>
+                        <FontImageSource
+                                        FontFamily="{StaticResource MaterialFontFamily}"
+                                        Glyph="{Static helper:clsIconFontHelper.GamepadCircleRight}"
+                                        Color="White"
+                                        Size="40" />
+                    </Image.Source>
+                </Image>
+                <Label x:Name="LblHeader" Text="Xamarin App" Style="{StaticResource LoginHeaderStyle}" />
+            </StackLayout>
+            <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
+                <Image x:Name="ImgUserName">
+                    <Image.Source>
+                        <FontImageSource
+                                        FontFamily="{StaticResource MaterialFontFamily}"
+                                        Glyph="{Static helper:clsIconFontHelper.Account}"
+                                        Color="Black"
+                                        Size="40" />
+                    </Image.Source>
+                </Image>
+                <Entry x:Name="TxtUserName" Placeholder="Username" Style="{StaticResource LoginTextFieldStyle}" />
+            </StackLayout>
+            <StackLayout Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
+                <Image x:Name="ImgPassword">
+                    <Image.Source>
+                        <FontImageSource
+                                        FontFamily="{StaticResource MaterialFontFamily}"
+                                        Glyph="{Static helper:clsIconFontHelper.Lock}"
+                                        Color="Black"
+                                        Size="40" />
+                    </Image.Source>
+                </Image>
+                <Entry x:Name="TxtPassword" Placeholder="Password" Style="{StaticResource LoginPasswordFieldStyle}" />
+            </StackLayout>
+            <StackLayout Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
+                <Image x:Name="ImgSpin">
+                    <Image.Source>
+                        <FontImageSource
+                                        FontFamily="{StaticResource MaterialFontFamily}"
+                                        Glyph="{Static helper:clsIconFontHelper.Dialpad}"
+                                        Color="Black"
+                                        Size="40" />
+                    </Image.Source>
+                </Image>
+                <Entry x:Name="TxtSpin" Placeholder="SPIN" Style="{StaticResource LoginPasswordFieldStyle}" />
+            </StackLayout>
+            <StackLayout Grid.Row="4" Grid.Column="0" Orientation="Horizontal">
+                <CheckBox x:Name="ChkRememberMe"/>
+                <Label x:Name="LblRememberMe" Text="Remember me?" FontSize="11" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+            </StackLayout>
+            <StackLayout Grid.Row="4" Grid.Column="1">
+                <Label x:Name="LblForgotPassword" Text="Forgot Password?" FontSize="11" HorizontalTextAlignment="End" VerticalTextAlignment="Center" Padding="0,0,5,0" VerticalOptions="CenterAndExpand"/>
+            </StackLayout>
+            <Frame Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource FrameButtonStyle}">
+                <StackLayout Orientation="Horizontal" x:Name="BtnLogin" Background="LightGreen">
+                    <ContentView HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                        <StackLayout Orientation="Horizontal">
+                            <Image>
+                                <Image.Source>
+                                    <FontImageSource
+                                        FontFamily="{StaticResource MaterialFontFamily}"
+                                        Glyph="{Static helper:clsIconFontHelper.Login}"
+                                        Color="White"
+                                        Size="40" />
+                                </Image.Source>
+                            </Image>
+                            <Label Text="LOGIN" FontAttributes="Bold" TextColor="White" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" />
+                        </StackLayout>
+                    </ContentView>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="BtnLogin_Tapped"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+            </Frame>
+            <StackLayout Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Label x:Name="LblFooter" Text="Don't have an account?" FontSize="8" VerticalOptions="EndAndExpand" Margin="0,0,0,15"/>
+                <Frame Style="{StaticResource FrameButtonStyle}" VerticalOptions="EndAndExpand" HeightRequest="25" WidthRequest="60" CornerRadius="8" Padding="3,3,3,3" BorderColor="LightGreen" Margin="0,0,0,5" >
+                    <StackLayout Orientation="Horizontal" x:Name="BtnSignUp" BackgroundColor="White">
+                        <Image>
+                            <Image.Source>
+                                <FontImageSource
+                                        FontFamily="{StaticResource MaterialFontFamily}"
+                                        Glyph="{Static helper:clsIconFontHelper.Pencil}"
+                                        Color="LightGreen"
+                                        Size="20" />
+                            </Image.Source>
+                        </Image>
+                        <Label Text="SIGN UP" FontSize="8" FontAttributes="Bold" TextColor="LightGreen" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" />
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="BtnSignUp_Tapped"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

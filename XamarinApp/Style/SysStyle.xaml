@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <!--font icon styles-->
+    <OnPlatform x:Key="MaterialFontFamily" x:TypeArguments="x:String">
+        <On Platform="Android" Value="materialdesignicons-webfont.ttf#Material Design Icons" />
+        <On Platform="iOS" Value="Material Design Icons" />
+    </OnPlatform>
+
+    <!--login styles-->
+    <Style x:Key="LoginHeaderStyle" TargetType="Label" >
+        <Setter Property="FontSize" Value="22"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="TextColor" Value="White"/>
+        <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        <Setter Property="VerticalTextAlignment" Value="End"/>
+        <Setter Property="Padding" Value="0,0,0,5"/>
+    </Style>
+
+    <Style x:Key="LoginTextFieldStyle" TargetType="Entry" >
+        <Setter Property="FontSize" Value="11"/>
+        <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+    </Style>
+
+    <Style x:Key="LoginPasswordFieldStyle" TargetType="Entry" >
+        <Setter Property="FontSize" Value="11"/>
+        <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+        <Setter Property="IsPassword" Value="True"/>
+    </Style>
+
+    <!--menu styles-->
+    <Style x:Key="MenuHeaderStyle" TargetType="Label" >
+        <Setter Property="FontSize" Value="22"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="TextColor" Value="White"/>
+        <Setter Property="HorizontalTextAlignment" Value="Start"/>
+        <Setter Property="VerticalTextAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="MenuItemStyle" TargetType="Button" >
+        <Setter Property="FontSize" Value="11"/>
+        <Setter Property="BackgroundColor" Value="LightGreen"/>
+        <Setter Property="TextColor" Value="White"/>
+        <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+        <Setter Property="CornerRadius" Value="0"/>
+        <Setter Property="Margin" Value="5,0,5,0"/>
+        <Setter Property="Padding" Value="5,0,0,0"/>
+        <Setter Property="ContentLayout" Value="Left, 50"/>
+    </Style>
+
+    <!--general fields-->
+    <Style x:Key="SearchFieldStyle" TargetType="Entry" >
+        <Setter Property="FontSize" Value="11"/>
+        <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+    </Style>
+
+    <Style x:Key="ListViewStyle" TargetType="ListView" >
+        <Setter Property="HasUnevenRows" Value="True"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="SeparatorVisibility" Value="None"/>
+        <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+        <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+    </Style>
+
+    <Style x:Key="RecordHeaderStyle" TargetType="Label" >
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="Padding" Value="5,0,0,0"/>
+    </Style>
+
+    <Style x:Key="RecordDetailStyle" TargetType="Label" >
+        <Setter Property="FontSize" Value="11"/>
+        <Setter Property="FontAttributes" Value="None"/>
+        <Setter Property="Padding" Value="5,0,0,0"/>
+    </Style>
+
+    <Style x:Key="FrameButtonStyle" TargetType="Frame" >
+        <Setter Property="CornerRadius" Value="0"/>
+        <Setter Property="HasShadow" Value="False"/>
+        <Setter Property="Padding" Value="0,0,0,0"/>
+        <Setter Property="BackgroundColor" Value="Transparent"/>
+        <Setter Property="BorderColor" Value="Transparent"/>
+        <Setter Property="IsClippedToBounds" Value="True"/>
+    </Style>
+
+    <Style x:Key="CreateNewHeaderStyle" TargetType="Label" >
+        <Setter Property="FontSize" Value="22"/>
+        <Setter Property="TextColor" Value="White"/>
+        <Setter Property="HorizontalTextAlignment" Value="Start"/>
+        <Setter Property="VerticalTextAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="5,0,0,0"/>
+    </Style>
+
+    <Style x:Key="LabelFieldStyle" TargetType="Label" >
+        <Setter Property="FontSize" Value="11"/>
+        <Setter Property="HorizontalTextAlignment" Value="Start"/>
+        <Setter Property="VerticalTextAlignment" Value="Center"/>
+        <Setter Property="WidthRequest" Value="70"/>
+        <Setter Property="Margin" Value="5,0,0,0"/>
+        <Setter Property="Padding" Value="5,0,0,0"/>
+    </Style>
+
+    <Style x:Key="TextFieldStyle" TargetType="Entry" >
+        <Setter Property="FontSize" Value="11"/>
+        <Setter Property="HorizontalTextAlignment" Value="Start"/>
+        <Setter Property="VerticalTextAlignment" Value="Center"/>
+        <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+    </Style>
+
+</ResourceDictionary>
