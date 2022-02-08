@@ -5,7 +5,7 @@ using XamarinApp.Service;
 
 namespace XamarinApp.ViewModel
 {
-	public class clsNoteDetailViewModel : clsBaseViewModel
+	public class TrnNoteDetailViewModel : BaseViewModel
 	{
 		private int id;
 
@@ -34,7 +34,7 @@ namespace XamarinApp.ViewModel
 		public Command InsertNoteCommand { get; set; }
 		public Command UpdateNoteCommand { get; set; }
 
-		public clsNoteDetailViewModel()
+		public TrnNoteDetailViewModel()
 		{
 			InsertNoteCommand = new Command(() => InsertNote());
 			UpdateNoteCommand = new Command(() => UpdateNote());
@@ -44,10 +44,10 @@ namespace XamarinApp.ViewModel
 		{
 			try
 			{
-				clsNote note = new clsNote();
+				TrnNoteModel note = new TrnNoteModel();
 				note.Note = Note;
 
-				clsNoteService noteService = new clsNoteService();
+				TrnNoteService noteService = new TrnNoteService();
 				noteService.InsertNote(note);
 			}
 			catch (Exception)
@@ -59,11 +59,11 @@ namespace XamarinApp.ViewModel
 		{
 			try
 			{
-				clsNote note = new clsNote();
+				TrnNoteModel note = new TrnNoteModel();
 				note.Id = Id;
 				note.Note = Note;
 
-				clsNoteService noteService = new clsNoteService();
+				TrnNoteService noteService = new TrnNoteService();
 				noteService.UpdateNote(note);
 			}
 			catch (Exception)

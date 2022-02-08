@@ -2,7 +2,7 @@
 
 namespace XamarinApp.Model
 {
-	public interface clsSQLiteInterface
+	public interface SQLiteInterface
 	{
 		SQLiteConnection GetConnection();
 	}

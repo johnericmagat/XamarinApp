@@ -16,7 +16,7 @@
                                 <Image.Source>
                                     <FontImageSource
                                         FontFamily="{StaticResource MaterialFontFamily}"
-                                        Glyph="{Static helper:clsIconFontHelper.Home}"
+                                        Glyph="{Static helper:IconFontHelper.Home}"
                                         Color="White"
                                         Size="40" />
                                 </Image.Source>
@@ -24,64 +24,64 @@
                             <Label x:Name="LblHeader" Text="Xamarin App" Style="{StaticResource MenuHeaderStyle}" />
                         </StackLayout>
                         <StackLayout Orientation="Horizontal" HeightRequest="32">
-                            <customRenderer:clsButtonTextAlignmentLeft x:Name="BtnMasterFile" Text="Master Files" Style="{StaticResource MenuItemStyle}" Clicked="BtnMasterFile_Clicked">
+                            <customRenderer:ButtonTextAlignmentLeft x:Name="BtnMasterFile" Text="Master Files" Style="{StaticResource MenuItemStyle}" Clicked="BtnMasterFile_Clicked">
                                 <Button.ImageSource>
                                     <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
-                                     Glyph="{Static helper:clsIconFontHelper.FolderMultiple}"
+                                     Glyph="{Static helper:IconFontHelper.FolderMultiple}"
                                      Color="White"
                                      Size="25" />
                                 </Button.ImageSource>
-                            </customRenderer:clsButtonTextAlignmentLeft>
+                            </customRenderer:ButtonTextAlignmentLeft>
                         </StackLayout>
                         <StackLayout Orientation="Horizontal" HeightRequest="32">
-                            <customRenderer:clsButtonTextAlignmentLeft x:Name="BtnTransaction" Text="Transactions" Style="{StaticResource MenuItemStyle}" Clicked="BtnTransaction_Clicked">
+                            <customRenderer:ButtonTextAlignmentLeft x:Name="BtnTransaction" Text="Transactions" Style="{StaticResource MenuItemStyle}" Clicked="BtnTransaction_Clicked">
                                 <Button.ImageSource>
                                     <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
-                                     Glyph="{Static helper:clsIconFontHelper.Briefcase}"
+                                     Glyph="{Static helper:IconFontHelper.Briefcase}"
                                      Color="White"
                                      Size="25" />
                                 </Button.ImageSource>
-                            </customRenderer:clsButtonTextAlignmentLeft>
+                            </customRenderer:ButtonTextAlignmentLeft>
                         </StackLayout>
                         <StackLayout Orientation="Horizontal" HeightRequest="32">
-                            <customRenderer:clsButtonTextAlignmentLeft x:Name="BtnReport" Text="Reports" Style="{StaticResource MenuItemStyle}" Clicked="BtnReport_Clicked">
+                            <customRenderer:ButtonTextAlignmentLeft x:Name="BtnReport" Text="Reports" Style="{StaticResource MenuItemStyle}" Clicked="BtnReport_Clicked">
                                 <Button.ImageSource>
                                     <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
-                                     Glyph="{Static helper:clsIconFontHelper.PaperRoll}"
+                                     Glyph="{Static helper:IconFontHelper.PaperRoll}"
                                      Color="White"
                                      Size="25" />
                                 </Button.ImageSource>
-                            </customRenderer:clsButtonTextAlignmentLeft>
+                            </customRenderer:ButtonTextAlignmentLeft>
                         </StackLayout>
                         <StackLayout Orientation="Horizontal" HeightRequest="32">
-                            <customRenderer:clsButtonTextAlignmentLeft x:Name="BtnSetting" Text="Settings" Style="{StaticResource MenuItemStyle}" Clicked="BtnSetting_Clicked">
+                            <customRenderer:ButtonTextAlignmentLeft x:Name="BtnSetting" Text="Settings" Style="{StaticResource MenuItemStyle}" Clicked="BtnSetting_Clicked">
                                 <Button.ImageSource>
                                     <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
-                                     Glyph="{Static helper:clsIconFontHelper.Cog}"
+                                     Glyph="{Static helper:IconFontHelper.Cog}"
                                      Color="White"
                                      Size="25" />
                                 </Button.ImageSource>
-                            </customRenderer:clsButtonTextAlignmentLeft>
+                            </customRenderer:ButtonTextAlignmentLeft>
                         </StackLayout>
                         <StackLayout Orientation="Horizontal" HeightRequest="32">
-                            <customRenderer:clsButtonTextAlignmentLeft x:Name="BtnUtilities" Text="Utilities" Style="{StaticResource MenuItemStyle}" Clicked="BtnUtilities_Clicked">
+                            <customRenderer:ButtonTextAlignmentLeft x:Name="BtnUtilities" Text="Utilities" Style="{StaticResource MenuItemStyle}" Clicked="BtnUtilities_Clicked">
                                 <Button.ImageSource>
                                     <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
-                                     Glyph="{Static helper:clsIconFontHelper.Toolbox}"
+                                     Glyph="{Static helper:IconFontHelper.Toolbox}"
                                      Color="White"
                                      Size="25" />
                                 </Button.ImageSource>
-                            </customRenderer:clsButtonTextAlignmentLeft>
+                            </customRenderer:ButtonTextAlignmentLeft>
                         </StackLayout>
                         <StackLayout Orientation="Horizontal" HeightRequest="32">
-                            <customRenderer:clsButtonTextAlignmentLeft x:Name="BtnAbout" Text="About" Style="{StaticResource MenuItemStyle}" Clicked="BtnAbout_Clicked">
+                            <customRenderer:ButtonTextAlignmentLeft x:Name="BtnAbout" Text="About" Style="{StaticResource MenuItemStyle}" Clicked="BtnAbout_Clicked">
                                 <Button.ImageSource>
                                     <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
-                                     Glyph="{Static helper:clsIconFontHelper.Information}"
+                                     Glyph="{Static helper:IconFontHelper.Information}"
                                      Color="White"
                                      Size="25" />
                                 </Button.ImageSource>
-                            </customRenderer:clsButtonTextAlignmentLeft>
+                            </customRenderer:ButtonTextAlignmentLeft>
                         </StackLayout>
                     </StackLayout>
                 </ScrollView>

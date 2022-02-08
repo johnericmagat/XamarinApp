@@ -6,11 +6,11 @@ using XamarinApp.Service;
 
 namespace XamarinApp.ViewModel
 {
-	public class clsNoteListViewModel : clsBaseViewModel
+	public class TrnNoteListViewModel : BaseViewModel
 	{
-		private ObservableCollection<clsNote> notes;
+		private ObservableCollection<TrnNoteModel> notes;
 
-		public ObservableCollection<clsNote> Notes
+		public ObservableCollection<TrnNoteModel> Notes
 		{
 			get { return notes; }
 			set
@@ -24,13 +24,13 @@ namespace XamarinApp.ViewModel
 		public Command DeleteNoteCommand { get; set; }
 		public Command FilterNoteCommand { get; set; }
 
-		private clsNote previousNote;
+		private TrnNoteModel previousNote;
 
-		public clsNote Note;
+		public TrnNoteModel Note;
 
-		public clsNoteListViewModel()
+		public TrnNoteListViewModel()
 		{
-			Notes = new ObservableCollection<clsNote>();
+			Notes = new ObservableCollection<TrnNoteModel>();
 
 			CreateTableCommand = new Command(() => CreateTable());
 			ViewNoteCommand = new Command<int>((id) => ViewNote(id));
@@ -42,15 +42,15 @@ namespace XamarinApp.ViewModel
 
 		private void CreateTable()
 		{
-			var createTmpNoteHelper = new clsCreateTmpNoteHelper();
+			var createTmpNoteHelper = new CreateTmpNoteHelper();
 			createTmpNoteHelper.CreateTable();
 		}
 
-		private clsNote ViewNote(int id)
+		private TrnNoteModel ViewNote(int id)
 		{
-			Note = new clsNote();
+			Note = new TrnNoteModel();
 
-			clsNoteService noteService = new clsNoteService();
+			TrnNoteService noteService = new TrnNoteService();
 			Note = noteService.ViewNote(id);
 
 			return Note;
@@ -58,15 +58,15 @@ namespace XamarinApp.ViewModel
 
 		private void DeleteNote(int id)
 		{
-			clsNoteService noteService = new clsNoteService();
+			TrnNoteService noteService = new TrnNoteService();
 			noteService.DeleteNote(id);
 		}
 
 		private void FilterNote(string search)
 		{
-			Notes = new ObservableCollection<clsNote>();
+			Notes = new ObservableCollection<TrnNoteModel>();
 
-			clsNoteService noteService = new clsNoteService();
+			TrnNoteService noteService = new TrnNoteService();
 			var query = noteService.FilterNote(search);
 
 			foreach (var note in query)
@@ -75,7 +75,7 @@ namespace XamarinApp.ViewModel
 			}
 		}
 
-		public void ShowOrHidePoducts(clsNote note)
+		public void ShowOrHidePoducts(TrnNoteModel note)
 		{
 			if (previousNote == note)
 			{
@@ -99,7 +99,7 @@ namespace XamarinApp.ViewModel
 			previousNote = note;
 		}
 
-		private void UpdateNotes(clsNote note)
+		private void UpdateNotes(TrnNoteModel note)
 		{
 			var index = Notes.IndexOf(note);
 

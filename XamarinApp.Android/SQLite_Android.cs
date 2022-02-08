@@ -4,17 +4,16 @@ using System.IO;
 using Xamarin.Forms;
 using XamarinApp.Model;
 
-[assembly: Dependency(typeof(XamarinApp.iOS.clsSQLite_iOS))]
-namespace XamarinApp.iOS
+[assembly: Dependency(typeof(XamarinApp.Droid.SQLite_Android))]
+namespace XamarinApp.Droid
 {
-	public class clsSQLite_iOS : clsSQLiteInterface
+	public class SQLite_Android : SQLiteInterface
 	{
 		public SQLiteConnection GetConnection()
 		{
 			var sQLiteFileName = "local.db3";
 			string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-			string libraryPath = Path.Combine(documentsPath, "..", "Library");
-			var path = Path.Combine(libraryPath, sQLiteFileName);
+			var path = Path.Combine(documentsPath, sQLiteFileName);
 			var connection = new SQLiteConnection(path);
 			return connection;
 		}

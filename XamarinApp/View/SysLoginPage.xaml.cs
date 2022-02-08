@@ -12,6 +12,7 @@ namespace XamarinApp.View
 			InitializeComponent();
 		}
 
+		[Obsolete]
 		private void BtnLogin_Tapped(object sender, EventArgs e)
 		{
 			Navigation.PushModalAsync(new SysMasterDetailPage());

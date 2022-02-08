@@ -9,12 +9,12 @@ namespace XamarinApp.View
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class TrnNoteDetailPage : ContentPage
 	{
-		clsNoteDetailViewModel vm;
-		public TrnNoteDetailPage(clsNote note)
+		TrnNoteDetailViewModel vm;
+		public TrnNoteDetailPage(TrnNoteModel note)
 		{
 			InitializeComponent();
 
-			vm = new clsNoteDetailViewModel();
+			vm = new TrnNoteDetailViewModel();
 			BindingContext = vm;
 
 			TxtId.Text = note.Id.ToString();

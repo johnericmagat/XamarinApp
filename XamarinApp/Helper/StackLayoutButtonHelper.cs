@@ -3,7 +3,7 @@ using Xamarin.Forms;
 
 namespace XamarinApp.Helper
 {
-	public static class clsStackLayoutButtonHelper
+	public static class StackLayoutButtonHelper
 	{
 		public static void ButtonTappedBackground(ContentPage contentPage)
 		{

@@ -7,10 +7,10 @@ using Xamarin.Forms.Platform.Android;
 using XamarinApp.CustomRenderer;
 using XamarinApp.Droid.CustomRenderer;
 
-[assembly: ExportRenderer(typeof(clsCustomViewCell), typeof(clsCustomViewCellAndroid))]
+[assembly: ExportRenderer(typeof(CustomViewCell), typeof(CustomViewCellAndroid))]
 namespace XamarinApp.Droid.CustomRenderer
 {
-	public class clsCustomViewCellAndroid : ViewCellRenderer
+	public class CustomViewCellAndroid : ViewCellRenderer
 	{
 		private Android.Views.View _cellCore;
 		private Drawable _unselectedBackground;
@@ -37,7 +37,7 @@ namespace XamarinApp.Droid.CustomRenderer
 
 				if (_selected)
 				{
-					var extendedCellView = sender as clsCustomViewCell;
+					var extendedCellView = sender as CustomViewCell;
 					_cellCore.SetBackgroundColor(extendedCellView.SelectedItemBackgroundColor.ToAndroid());
 				}
 				else

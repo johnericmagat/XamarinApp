@@ -5,17 +5,17 @@ using Xamarin.Forms.Platform.Android;
 using XamarinApp.CustomRenderer;
 using XamarinApp.Droid.CustomRenderer;
 
-[assembly: ExportRenderer(typeof(clsButtonTextAlignmentLeft), typeof(clsButtonTextAlignmentLeftAndroid))]
+[assembly: ExportRenderer(typeof(ButtonTextAlignmentCenter), typeof(ButtonTextAlignmentCenterAndroid))]
 namespace XamarinApp.Droid.CustomRenderer
 {
-	public class clsButtonTextAlignmentLeftAndroid : ButtonRenderer
+	public class ButtonTextAlignmentCenterAndroid : ButtonRenderer
 	{
         protected override void OnElementChanged(ElementChangedEventArgs<Button> e)
         {
             base.OnElementChanged(e);
-            Control.Gravity = GravityFlags.Start | GravityFlags.CenterVertical;
+            Control.Gravity = GravityFlags.Center;
         }
-        public clsButtonTextAlignmentLeftAndroid(Context context) : base(context)
+        public ButtonTextAlignmentCenterAndroid(Context context) : base(context)
         {
         }
     }

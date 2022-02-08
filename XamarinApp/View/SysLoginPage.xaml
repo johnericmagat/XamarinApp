@@ -24,7 +24,7 @@
                     <Image.Source>
                         <FontImageSource
                                         FontFamily="{StaticResource MaterialFontFamily}"
-                                        Glyph="{Static helper:clsIconFontHelper.GamepadCircleRight}"
+                                        Glyph="{Static helper:IconFontHelper.GamepadCircleRight}"
                                         Color="White"
                                         Size="40" />
                     </Image.Source>
@@ -36,7 +36,7 @@
                     <Image.Source>
                         <FontImageSource
                                         FontFamily="{StaticResource MaterialFontFamily}"
-                                        Glyph="{Static helper:clsIconFontHelper.Account}"
+                                        Glyph="{Static helper:IconFontHelper.Account}"
                                         Color="Black"
                                         Size="40" />
                     </Image.Source>
@@ -48,7 +48,7 @@
                     <Image.Source>
                         <FontImageSource
                                         FontFamily="{StaticResource MaterialFontFamily}"
-                                        Glyph="{Static helper:clsIconFontHelper.Lock}"
+                                        Glyph="{Static helper:IconFontHelper.Lock}"
                                         Color="Black"
                                         Size="40" />
                     </Image.Source>
@@ -60,7 +60,7 @@
                     <Image.Source>
                         <FontImageSource
                                         FontFamily="{StaticResource MaterialFontFamily}"
-                                        Glyph="{Static helper:clsIconFontHelper.Dialpad}"
+                                        Glyph="{Static helper:IconFontHelper.Dialpad}"
                                         Color="Black"
                                         Size="40" />
                     </Image.Source>
@@ -82,7 +82,7 @@
                                 <Image.Source>
                                     <FontImageSource
                                         FontFamily="{StaticResource MaterialFontFamily}"
-                                        Glyph="{Static helper:clsIconFontHelper.Login}"
+                                        Glyph="{Static helper:IconFontHelper.Login}"
                                         Color="White"
                                         Size="40" />
                                 </Image.Source>
@@ -103,7 +103,7 @@
                             <Image.Source>
                                 <FontImageSource
                                         FontFamily="{StaticResource MaterialFontFamily}"
-                                        Glyph="{Static helper:clsIconFontHelper.Pencil}"
+                                        Glyph="{Static helper:IconFontHelper.Pencil}"
                                         Color="LightGreen"
                                         Size="20" />
                             </Image.Source>

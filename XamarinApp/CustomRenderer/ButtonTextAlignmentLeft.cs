@@ -2,7 +2,7 @@
 
 namespace XamarinApp.CustomRenderer
 {
-	public class clsButtonTextAlignmentCenter : Button
+	public class ButtonTextAlignmentLeft : Button
 	{
 	}
 }

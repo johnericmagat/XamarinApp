@@ -9,12 +9,12 @@ namespace XamarinApp.View
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class TrnNoteListPage : ContentPage
 	{
-		clsNoteListViewModel vm;
+		TrnNoteListViewModel vm;
 		public TrnNoteListPage()
 		{
 			InitializeComponent();
 
-			vm = new clsNoteListViewModel();
+			vm = new TrnNoteListViewModel();
 			BindingContext = vm;
 		}
 
@@ -51,7 +51,7 @@ namespace XamarinApp.View
 			object id = ((ImageButton)sender).CommandParameter;
 			vm.ViewNoteCommand.Execute(id);
 
-			clsNote note = vm.Note;
+			TrnNoteModel note = vm.Note;
 			Navigation.PushAsync(new TrnNoteDetailPage(note));
 		}
 
@@ -70,14 +70,14 @@ namespace XamarinApp.View
 
 		private void BtnAdd_Tapped(object sender, EventArgs e)
 		{
-			clsNote note = new clsNote();
+			TrnNoteModel note = new TrnNoteModel();
 			Navigation.PushAsync(new TrnNoteDetailPage(note));
 		}
 
 		private void LstNote_ItemTapped(object sender, ItemTappedEventArgs e)
 		{
-			var note = e.Item as clsNote;
-			vm = BindingContext as clsNoteListViewModel;
+			var note = e.Item as TrnNoteModel;
+			vm = BindingContext as TrnNoteListViewModel;
 			vm?.ShowOrHidePoducts(note);
 		}
 	}

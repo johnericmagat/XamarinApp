@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace XamarinApp.ViewModel
 {
-	public class clsBaseViewModel : INotifyPropertyChanged
+	public class BaseViewModel : INotifyPropertyChanged
 	{
 		public event PropertyChangedEventHandler PropertyChanged;
 

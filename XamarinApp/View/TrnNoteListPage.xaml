@@ -21,7 +21,7 @@
             <ImageButton
                 x:Name="BtnFilter"
                 Source="{FontImage FontFamily={StaticResource MaterialFontFamily},
-                Glyph={Static helper:clsIconFontHelper.Magnify}, 
+                Glyph={Static helper:IconFontHelper.Magnify}, 
                 Color=Black,
                 Size=40}"
                 BackgroundColor="Transparent"
@@ -32,7 +32,7 @@
             <ListView x:Name="LstNote" ItemsSource="{Binding Notes}" Style="{StaticResource ListViewStyle}" CachingStrategy="RetainElement" ItemTapped="LstNote_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <customRenderer:clsCustomViewCell SelectedItemBackgroundColor="Transparent">
+                        <customRenderer:CustomViewCell SelectedItemBackgroundColor="Transparent">
                             <ViewCell.View>
                                 <StackLayout
                                     Orientation="Vertical"
@@ -44,7 +44,7 @@
                                         <ImageButton
                                             x:Name="BtnView"
                                             Source="{FontImage FontFamily={StaticResource MaterialFontFamily},
-                                            Glyph={Static helper:clsIconFontHelper.Eye}, 
+                                            Glyph={Static helper:IconFontHelper.Eye}, 
                                             Color=White,
                                             Size=40}"
                                             BackgroundColor="Transparent"
@@ -55,7 +55,7 @@
                                         <ImageButton
                                             x:Name="BtnDelete"
                                             Source="{FontImage FontFamily={StaticResource MaterialFontFamily},
-                                            Glyph={Static helper:clsIconFontHelper.Delete},
+                                            Glyph={Static helper:IconFontHelper.Delete},
                                             Color=LightCoral,
                                             Size=40}"
                                             BackgroundColor="Transparent"
@@ -66,7 +66,7 @@
                                     </StackLayout>
                                 </StackLayout>
                             </ViewCell.View>
-                        </customRenderer:clsCustomViewCell>
+                        </customRenderer:CustomViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
@@ -79,7 +79,7 @@
                             <Image.Source>
                                 <FontImageSource
                                         FontFamily="{StaticResource MaterialFontFamily}"
-                                        Glyph="{Static helper:clsIconFontHelper.Plus}"
+                                        Glyph="{Static helper:IconFontHelper.Plus}"
                                         Color="White"
                                         Size="40" />
                             </Image.Source>

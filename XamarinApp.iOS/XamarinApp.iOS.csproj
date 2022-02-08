@@ -66,11 +66,11 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="clsSQLite_iOS.cs" />
-    <Compile Include="CustomRenderer\clsButtonTextAlignmentCenteriOS.cs" />
-    <Compile Include="CustomRenderer\clsButtonTextAlignmentLeftiOS.cs" />
-    <Compile Include="CustomRenderer\clsButtonTextAlignmentRightiOS.cs" />
-    <Compile Include="CustomRenderer\clsCustomViewCelliOS.cs" />
+    <Compile Include="SQLite_iOS.cs" />
+    <Compile Include="CustomRenderer\ButtonTextAlignmentCenteriOS.cs" />
+    <Compile Include="CustomRenderer\ButtonTextAlignmentLeftiOS.cs" />
+    <Compile Include="CustomRenderer\ButtonTextAlignmentRightiOS.cs" />
+    <Compile Include="CustomRenderer\CustomViewCelliOS.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="Entitlements.plist" />
@@ -134,16 +134,19 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.1</Version>
+    </PackageReference>
     <PackageReference Include="sqlite-net-pcl">
       <Version>1.8.116</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2291" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.1" />
     <PackageReference Include="Xamarin.Forms.PancakeView">
       <Version>2.3.0.759</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms.Visual.Material">
-      <Version>5.0.0.2291</Version>
+      <Version>5.0.0.2337</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

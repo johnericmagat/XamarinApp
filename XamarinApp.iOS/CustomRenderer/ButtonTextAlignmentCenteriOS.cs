@@ -4,10 +4,10 @@ using Xamarin.Forms.Platform.iOS;
 using XamarinApp.CustomRenderer;
 using XamarinApp.iOS.CustomRenderer;
 
-[assembly: ExportRenderer(typeof(clsButtonTextAlignmentCenter), typeof(clsButtonTextAlignmentCenteriOS))]
+[assembly: ExportRenderer(typeof(ButtonTextAlignmentCenter), typeof(ButtonTextAlignmentCenteriOS))]
 namespace XamarinApp.iOS.CustomRenderer
 {
-	public class clsButtonTextAlignmentCenteriOS : ButtonRenderer
+	public class ButtonTextAlignmentCenteriOS : ButtonRenderer
 	{
 		protected override void OnElementChanged(ElementChangedEventArgs<Button> e)
 		{

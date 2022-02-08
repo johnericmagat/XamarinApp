@@ -37,7 +37,7 @@
                             <Image.Source>
                                 <FontImageSource
                                         FontFamily="{StaticResource MaterialFontFamily}"
-                                        Glyph="{Static helper:clsIconFontHelper.ContentSave}"
+                                        Glyph="{Static helper:IconFontHelper.ContentSave}"
                                         Color="White"
                                         Size="40" />
                             </Image.Source>
@@ -58,7 +58,7 @@
                             <Image.Source>
                                 <FontImageSource
                                         FontFamily="{StaticResource MaterialFontFamily}"
-                                        Glyph="{Static helper:clsIconFontHelper.ContentSaveEdit}"
+                                        Glyph="{Static helper:IconFontHelper.ContentSaveEdit}"
                                         Color="White"
                                         Size="40" />
                             </Image.Source>
@@ -79,7 +79,7 @@
                             <Image.Source>
                                 <FontImageSource
                                         FontFamily="{StaticResource MaterialFontFamily}"
-                                        Glyph="{Static helper:clsIconFontHelper.Close}"
+                                        Glyph="{Static helper:IconFontHelper.Close}"
                                         Color="White"
                                         Size="40" />
                             </Image.Source>

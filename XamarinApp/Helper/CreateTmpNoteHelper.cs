@@ -4,13 +4,13 @@ using XamarinApp.Model;
 
 namespace XamarinApp.Helper
 {
-	public class clsCreateTmpNoteHelper
+	public class CreateTmpNoteHelper
 	{
 		public void CreateTable()
 		{
-			using (var connection = DependencyService.Get<clsSQLiteInterface>().GetConnection())
+			using (var connection = DependencyService.Get<SQLiteInterface>().GetConnection())
 			{
-				connection.CreateTable<clsNote>();
+				connection.CreateTable<TrnNoteModel>();
 				connection.Close();
 				connection.Dispose();
 			}

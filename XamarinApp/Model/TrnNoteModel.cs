@@ -3,7 +3,7 @@
 namespace XamarinApp.Model
 {
 	[Table("TmpNote")]
-	public class clsNote
+	public class TrnNoteModel
 	{
 		[Column("Id"), PrimaryKey, AutoIncrement]
 		public int Id { get; set; }
