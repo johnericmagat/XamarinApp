@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace XamarinApp.View
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class MstPage2 : ContentPage
+	public partial class MstPage2View : ContentPage
 	{
-		public MstPage2()
+		public MstPage2View()
 		{
 			InitializeComponent();
 		}

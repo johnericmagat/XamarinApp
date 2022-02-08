@@ -7,10 +7,10 @@ using XamarinApp.ViewModel;
 namespace XamarinApp.View
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class TrnNoteListPage : ContentPage
+	public partial class TrnNoteListView : ContentPage
 	{
 		TrnNoteListViewModel vm;
-		public TrnNoteListPage()
+		public TrnNoteListView()
 		{
 			InitializeComponent();
 
@@ -52,7 +52,7 @@ namespace XamarinApp.View
 			vm.ViewNoteCommand.Execute(id);
 
 			TrnNoteModel note = vm.Note;
-			Navigation.PushAsync(new TrnNoteDetailPage(note));
+			Navigation.PushAsync(new TrnNoteDetailView(note));
 		}
 
 		private async void BtnDelete_Clicked(object sender, EventArgs e)
@@ -71,7 +71,7 @@ namespace XamarinApp.View
 		private void BtnAdd_Tapped(object sender, EventArgs e)
 		{
 			TrnNoteModel note = new TrnNoteModel();
-			Navigation.PushAsync(new TrnNoteDetailPage(note));
+			Navigation.PushAsync(new TrnNoteDetailView(note));
 		}
 
 		private void LstNote_ItemTapped(object sender, ItemTappedEventArgs e)

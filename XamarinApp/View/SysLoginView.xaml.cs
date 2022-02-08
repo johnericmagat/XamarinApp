@@ -5,9 +5,9 @@ using Xamarin.Forms.Xaml;
 namespace XamarinApp.View
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class SysLoginPage : ContentPage
+	public partial class SysLoginView : ContentPage
 	{
-		public SysLoginPage()
+		public SysLoginView()
 		{
 			InitializeComponent();
 		}
@@ -15,7 +15,7 @@ namespace XamarinApp.View
 		[Obsolete]
 		private void BtnLogin_Tapped(object sender, EventArgs e)
 		{
-			Navigation.PushModalAsync(new SysMasterDetailPage());
+			Navigation.PushModalAsync(new SysMasterDetailView());
 		}
 
 		private void BtnSignUp_Tapped(object sender, EventArgs e)

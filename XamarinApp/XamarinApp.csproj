@@ -27,28 +27,46 @@
     <Compile Update="Style\SoftwareStyle.xaml.cs">
       <DependentUpon>SoftwareStyle.xaml</DependentUpon>
     </Compile>
+    <Compile Update="View\MstPage1View.xaml.cs">
+      <DependentUpon>MstPage1View.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\MstPage2View.xaml.cs">
+      <DependentUpon>MstPage2View.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\SysLoginView.xaml.cs">
+      <DependentUpon>SysLoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\SysMasterDetailView.xaml.cs">
+      <DependentUpon>SysMasterDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\TrnNoteDetailView.xaml.cs">
+      <DependentUpon>TrnNoteDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\TrnNoteListView.xaml.cs">
+      <DependentUpon>TrnNoteListView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Update="Style\SoftwareStyle.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\MstPage1.xaml">
+    <EmbeddedResource Update="View\MstPage1View.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\MstPage2.xaml">
+    <EmbeddedResource Update="View\MstPage2View.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\SysLoginPage.xaml">
+    <EmbeddedResource Update="View\SysLoginView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\SysMasterDetailPage.xaml">
+    <EmbeddedResource Update="View\SysMasterDetailView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\TrnNoteDetailPage.xaml">
+    <EmbeddedResource Update="View\TrnNoteDetailView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\TrnNoteListPage.xaml">
+    <EmbeddedResource Update="View\TrnNoteListView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

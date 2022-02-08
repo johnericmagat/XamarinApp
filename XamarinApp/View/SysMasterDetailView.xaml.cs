@@ -5,13 +5,13 @@ using Xamarin.Forms.Xaml;
 namespace XamarinApp.View
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class SysMasterDetailPage : MasterDetailPage
+	public partial class SysMasterDetailView : MasterDetailPage
 	{
-		public SysMasterDetailPage()
+		public SysMasterDetailView()
 		{
 			InitializeComponent();
 
-			Detail = new NavigationPage(new MstPage1());
+			Detail = new NavigationPage(new MstPage1View());
 			IsPresented = false;
 		}
 
@@ -22,7 +22,7 @@ namespace XamarinApp.View
 
 		private void BtnTransaction_Clicked(object sender, EventArgs e)
 		{
-			Detail = new NavigationPage(new TrnNoteListPage());
+			Detail = new NavigationPage(new TrnNoteListView());
 			IsPresented = false;
 		}
 
@@ -43,7 +43,7 @@ namespace XamarinApp.View
 
 		private void BtnAbout_Clicked(object sender, EventArgs e)
 		{
-			Detail = new NavigationPage(new MstPage1());
+			Detail = new NavigationPage(new MstPage1View());
 			IsPresented = false;
 		}
 	}

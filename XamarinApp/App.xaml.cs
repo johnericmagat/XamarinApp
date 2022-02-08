@@ -9,7 +9,7 @@ namespace XamarinApp
 		{
 			InitializeComponent();
 
-			MainPage = new SysLoginPage();
+			MainPage = new SysLoginView();
 		}
 
 		protected override void OnStart()

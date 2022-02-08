@@ -7,10 +7,10 @@ using XamarinApp.ViewModel;
 namespace XamarinApp.View
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class TrnNoteDetailPage : ContentPage
+	public partial class TrnNoteDetailView : ContentPage
 	{
 		TrnNoteDetailViewModel vm;
-		public TrnNoteDetailPage(TrnNoteModel note)
+		public TrnNoteDetailView(TrnNoteModel note)
 		{
 			InitializeComponent();
 
