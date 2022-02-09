@@ -11,7 +11,7 @@
             <ContentPage.Content>
                 <ScrollView>
                     <StackLayout Background="White">
-                        <StackLayout Orientation="Horizontal" HeightRequest="60" Background="#03A9F4">
+                        <StackLayout Orientation="Horizontal" HeightRequest="100" Background="#03A9F4">
                             <Image x:Name="ImgHeader" Margin="5,0,0,0">
                                 <Image.Source>
                                     <FontImageSource
