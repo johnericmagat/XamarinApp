@@ -25,7 +25,7 @@
                                         FontFamily="{StaticResource MaterialFontFamily}"
                                         Glyph="{Static helper:IconFontHelper.GamepadCircleRight}"
                                         Color="White"
-                                        Size="40" />
+                                        Size="80" />
                     </Image.Source>
                 </Image>
                 <Label x:Name="LblHeader" Text="Xamarin App" Style="{StaticResource LoginHeaderStyle}" />

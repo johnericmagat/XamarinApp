@@ -8,25 +8,16 @@ namespace XamarinApp.ViewModel
 {
 	public class TrnNoteListViewModel : BaseViewModel
 	{
-		private ObservableCollection<TrnNoteModel> notes;
+		public ObservableCollection<TrnNoteModel> Notes { get; set; }
 
-		public ObservableCollection<TrnNoteModel> Notes
-		{
-			get { return notes; }
-			set
-			{
-				notes = value;
-			}
-		}
+		private TrnNoteModel previousNote;
+
+		public TrnNoteModel Note;
 
 		public Command CreateTableCommand { get; set; }
 		public Command ViewNoteCommand { get; set; }
 		public Command DeleteNoteCommand { get; set; }
 		public Command FilterNoteCommand { get; set; }
-
-		private TrnNoteModel previousNote;
-
-		public TrnNoteModel Note;
 
 		public TrnNoteListViewModel()
 		{
@@ -91,6 +82,7 @@ namespace XamarinApp.ViewModel
 					previousNote.IsVisible = false;
 					UpdateNotes(previousNote);
 				}
+
 				// show selected item
 				note.IsVisible = true;
 				UpdateNotes(note);
@@ -101,7 +93,7 @@ namespace XamarinApp.ViewModel
 
 		private void UpdateNotes(TrnNoteModel note)
 		{
-			var index = Notes.IndexOf(note);
+			int index = Notes.IndexOf(note);
 
 			if (index >= 0)
 			{
