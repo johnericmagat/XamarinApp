@@ -41,10 +41,15 @@ namespace XamarinApp.View
 
 		}
 
-		private void BtnAbout_Clicked(object sender, EventArgs e)
+		private void BtnAboutUs_Clicked(object sender, EventArgs e)
 		{
 			Detail = new NavigationPage(new MstPage1View());
 			IsPresented = false;
+		}
+
+		private void BtnLogout_Clicked(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

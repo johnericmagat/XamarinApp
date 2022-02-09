@@ -74,10 +74,20 @@
                             </customRenderer:ButtonTextAlignmentLeft>
                         </StackLayout>
                         <StackLayout Orientation="Horizontal" HeightRequest="32">
-                            <customRenderer:ButtonTextAlignmentLeft x:Name="BtnAbout" Text="About" Style="{StaticResource MenuItemStyle}" Clicked="BtnAbout_Clicked">
+                            <customRenderer:ButtonTextAlignmentLeft x:Name="BtnAboutUs" Text="About Us" Style="{StaticResource MenuItemStyle}" Clicked="BtnAboutUs_Clicked">
                                 <Button.ImageSource>
                                     <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
                                      Glyph="{Static helper:IconFontHelper.Information}"
+                                     Color="White"
+                                     Size="25" />
+                                </Button.ImageSource>
+                            </customRenderer:ButtonTextAlignmentLeft>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HeightRequest="32">
+                            <customRenderer:ButtonTextAlignmentLeft x:Name="BtnLogout" Text="Logout" Style="{StaticResource MenuItemStyle}" Clicked="BtnLogout_Clicked">
+                                <Button.ImageSource>
+                                    <FontImageSource FontFamily="{StaticResource MaterialFontFamily}"
+                                     Glyph="{Static helper:IconFontHelper.Logout}"
                                      Color="White"
                                      Size="25" />
                                 </Button.ImageSource>
