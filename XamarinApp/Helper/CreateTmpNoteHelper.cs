@@ -10,8 +10,6 @@ namespace XamarinApp.Helper
 			using (var connection = DependencyService.Get<SQLiteInterface>().GetConnection())
 			{
 				connection.CreateTable<TrnNoteModel>();
-				connection.Close();
-				connection.Dispose();
 			}
 		}
 	}
