@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamarinApp.Service;
 
 namespace XamarinApp.View
 {
@@ -12,10 +13,15 @@ namespace XamarinApp.View
 			InitializeComponent();
 		}
 
-		[Obsolete]
-		private void BtnLogin_Tapped(object sender, EventArgs e)
+		private async void BtnLogin_Tapped(object sender, EventArgs e)
 		{
-			Navigation.PushModalAsync(new SysMasterDetailView());
+			SysAccessTokenService accessTokenService = new SysAccessTokenService();
+			int user = await accessTokenService.WriteAccessToken();
+
+			if (user > 0)
+			{
+				await Navigation.PushModalAsync(new SysMasterDetailView());
+			}
 		}
 
 		private void BtnSignUp_Tapped(object sender, EventArgs e)

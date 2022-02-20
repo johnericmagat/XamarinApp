@@ -17,7 +17,8 @@ namespace XamarinApp.View
 
 		private void BtnMasterFile_Clicked(object sender, EventArgs e)
 		{
-
+			Detail = new NavigationPage(new MstLabelsListView());
+			IsPresented = false;
 		}
 
 		private void BtnTransaction_Clicked(object sender, EventArgs e)

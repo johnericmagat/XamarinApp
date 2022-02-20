@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:customRenderer="clr-namespace:XamarinApp.CustomRenderer"
+             xmlns:helper="clr-namespace:XamarinApp.Helper"
+             x:Class="XamarinApp.View.MstLabelsListView"
+             Title="Labels List">
+
+    <Grid x:Name="GrdMain">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" BackgroundColor="Transparent">
+            <Entry x:Name="TxtSearch" Placeholder="Search lables" Style="{StaticResource SearchFieldStyle}" />
+            <ImageButton
+                x:Name="BtnFilter"
+                Source="{FontImage FontFamily={StaticResource MaterialFontFamily},
+                Glyph={Static helper:IconFontHelper.Magnify}, 
+                Color=Black,
+                Size=40}"
+                BackgroundColor="Transparent"
+                Margin="0,5,5,0"
+                Clicked="BtnFilter_Clicked" />
+        </StackLayout>
+        <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Vertical" BackgroundColor="Transparent">
+            <ListView x:Name="LstLabels" ItemsSource="{Binding Labels}" Style="{StaticResource ListViewStyle}" CachingStrategy="RetainElement" ItemTapped="LstLabels_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <customRenderer:CustomViewCell SelectedItemBackgroundColor="Transparent">
+                            <ViewCell.View>
+                                <StackLayout
+                                    Orientation="Vertical"
+                                    Margin="5,5,5,5"
+                                    Background="LightBlue">
+                                    <Label Text="{Binding Code}" Style="{StaticResource RecordHeaderStyle}" />
+                                    <Label Text="{Binding Label}" Style="{StaticResource RecordDetailStyle}" />
+                                    <Label Text="{Binding DisplayedLabel}" Style="{StaticResource RecordDetailStyle}" />
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                        <ImageButton
+                                            x:Name="BtnView"
+                                            Source="{FontImage FontFamily={StaticResource MaterialFontFamily},
+                                            Glyph={Static helper:IconFontHelper.Eye}, 
+                                            Color=White,
+                                            Size=40}"
+                                            BackgroundColor="Transparent"
+                                            CommandParameter="{Binding Id}"
+                                            IsVisible="{Binding IsVisible}"
+                                            Padding="0,0,15,0"
+                                            Clicked="BtnView_Clicked" />
+                                        <ImageButton
+                                            x:Name="BtnDelete"
+                                            Source="{FontImage FontFamily={StaticResource MaterialFontFamily},
+                                            Glyph={Static helper:IconFontHelper.Delete},
+                                            Color=LightCoral,
+                                            Size=40}"
+                                            BackgroundColor="Transparent"
+                                            CommandParameter="{Binding Id}"
+                                            IsVisible="{Binding IsVisible}"
+                                            Padding="15,0,0,0"
+                                            Clicked="BtnDelete_Clicked" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell.View>
+                        </customRenderer:CustomViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        <Frame Grid.Row="2" Grid.Column="1" Style="{StaticResource FrameButtonStyle}" Margin="0,0,5,5">
+            <StackLayout Orientation="Horizontal" x:Name="BtnAdd" Background="LightGreen">
+                <ContentView HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <StackLayout Orientation="Horizontal">
+                        <Image>
+                            <Image.Source>
+                                <FontImageSource
+                                        FontFamily="{StaticResource MaterialFontFamily}"
+                                        Glyph="{Static helper:IconFontHelper.Plus}"
+                                        Color="White"
+                                        Size="40" />
+                            </Image.Source>
+                        </Image>
+                        <Label Text="ADD" FontAttributes="Bold" TextColor="White" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" />
+                    </StackLayout>
+                </ContentView>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="BtnAdd_Tapped"/>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+        </Frame>
+    </Grid>
+</ContentPage>
